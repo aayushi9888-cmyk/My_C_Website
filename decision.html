@@ -1,0 +1,632 @@
+<!doctype html>
+<title> decision control</title>
+<head>
+<style>
+body{
+margin:0;
+font-family:arial, sans-serif;
+background:#ccc;
+color: #222;
+}
+</style>
+</head>
+<h1>Questions </h1>
+<h2>1.Write a program to enter the number from the user and check it is positive or negative or 0 </h2>
+<h3>Source Code</h3>
+<pre> #include &lt;stdio.h&gt;
+void main()
+{
+int num;
+printf("Enter a number: ");
+scanf("%d", &num);
+if(num > 0)
+{
+printf("Positive number");
+}
+else if(num < 0)
+{
+printf("Negative number");
+}
+else
+{
+printf("Number is zero");
+}
+}</pre>
+
+<h3>Output</h3>
+<pre>Enter a number: 10
+Positive number</pre>
+
+<h2> 2.Enter a number from user and check it is odd or even </h2>
+<h3>Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+ void main()
+{
+int num;
+printf("Enter a number: ");
+scanf("%d", &num); 
+if(num % 2 == 0)
+{
+printf("Even number");
+}
+else
+{
+printf("Odd number");
+}
+}</pre>
+
+<h3>Output</h3>
+<pre>Enter a number: 7
+Odd number</pre>
+
+<h2> 3.Enter a number from the user and check that it is of 1 digit or 2 digit or 3 digit or 4 digit or 5 digit.<h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int num;
+printf("Enter a number: ");
+scanf("%d", &num);
+if(num < 0)
+{
+num = -num;
+}
+if(num >= 0 && num <= 9)
+{
+printf("1 digit number");
+}
+else if(num <= 99)
+{
+printf("2 digit number");
+}
+else if(num <= 999)
+{
+printf("3 digit number");
+}
+else if(num <= 9999)
+{
+printf("4 digit number");
+}
+else if(num <= 99999)
+{
+printf("5 digit number");
+}
+else
+{
+printf("More than 5 digits");
+}
+}</pre>
+<h3> Output</h3>
+<pre> Enter a number: 456
+3 digit number</pre>
+
+
+<h2> 4.Enter a number from the user if the number is between 0 to 40 then we will print fail if the number is between 40 to 60 then we will print C grade ,if the number is between 60 to 80 than we will print B grade ,if the number is between 80 to 100 then we will print A grade and rest all number are invalid </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int marks;
+printf("Enter marks: ");
+scanf("%d", &marks);
+if(marks < 0 || marks > 100)
+{
+printf("Invalid marks");
+}
+else if(marks < 40)
+{
+printf("Fail");
+}
+else if(marks < 60)
+{
+printf("C Grade");
+}
+else if(marks < 80)
+{
+printf("B Grade");
+}
+else
+{
+printf("A Grade");
+}</pre>
+
+<h3> Output</h3>
+<pre>Enter marks: 75
+B Grade</pre>
+
+
+<h2> 5.Enter a number from the user and check it is a decimal number or not </h2>
+<h3> Source Code</h3>
+<pre>
+
+
+
+
+
+</pre>
+
+<h3> Output</h3>
+<pre>
+
+
+</pre>
+
+
+<h2> 6.Enter a number from the user if it is a negative then convert into positive and if it is positive then convert into negative often that print the number</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int num;
+printf("Enter a number: ");
+scanf("%d", &num);
+if(num < 0)
+{
+num = -num;
+}
+else if(num > 0)
+{
+num = -num;
+}
+printf("New number = %d", num);
+}
+</pre>
+<h3> Output </h3>
+<pre>Enter a number: -15
+New number = 15
+</pre>
+
+<h2> 7.Enter a character from the user and check that it is an alphabet</h2>
+<h3>Source Code</h2>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char ch;
+printf("Enter a character: ");
+scanf("%c", &ch);
+if((ch >= 'A' && ch <= 'Z') ||
+(ch >= 'a' && ch <= 'z'))
+{
+ printf("It is an alphabet");
+}
+else
+{
+printf("It is not an alphabet");
+}
+}</pre>
+<h3> Output</h3>
+<pre>Enter a character: G
+It is an alphabet</pre>
+
+
+<h2> 8.Enter a number from the user if the number is negative then square the number and if it is positive then increment the number 20 times</h3>
+<h3>Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+    int num, i;
+printf("Enter a number: ");
+scanf("%d", &num);
+if(num < 0)
+{
+printf("Square = %d", num * num);
+}
+else if(num > 0)
+{
+for(i = 1; i <= 20; i++)
+{
+num++;
+}
+
+printf("Number after increment = %d", num);
+ }
+else
+{
+printf("Number is zero");  
+}
+} </pre>
+<h3>Output</h3>
+<pre>Enter a number: -5
+Square = 25
+
+Enter a number: 5
+Number after increment = 25</pre>
+
+
+<h2> 9. Enter the number from the user it the number is negative or positive and find out of that number</h2>
+<h3>Source Code</h3>
+<pre> #include &lt;stdio.h&gt;
+void main()
+{
+int num;
+printf("Enter a number: ");
+scanf("%d", &num);
+if(num > 0)
+{
+printf("Positive number");
+}
+else if(num < 0)
+{
+printf("Negative number");
+}
+else
+{
+printf("Number is zero");
+}
+}</pre>
+<h3> Output</h3>
+<pre>Enter a number: -8
+Negative number</pre>
+
+<h2> 10.Enter two number from user and check which is the greater number and print the greater number </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int a, b;
+printf("Enter two numbers: ");
+scanf("%d %d", &a, &b);
+if(a > b)
+{
+printf("Greater number = %d", a);
+}
+else if(b > a)
+{
+printf("Greater number = %d", b);
+}
+else
+{
+printf("Both numbers are equal");
+}
+}</pre>
+<h3>Output</h3>
+<pre>Enter two numbers: 15 25
+Greater number = 25</pre>
+
+<h2> 11.Enter a number from user and check it is divisible by 4 or not</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int num;
+printf("Enter a number: ");
+scanf("%d", &num);
+if(num % 4 == 0)
+{
+printf("Number is divisible by 4");
+}
+else
+{
+printf("Number is not divisible by 4");
+}
+}</pre>
+
+<h3>Output</h3>
+<pre>Enter a number: 16
+Number is divisible by 4 </pre>
+
+<h2> 12.Enter a four characters from users and check they are equal or not</h2>
+<h3>Source Code</h3
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char a, b, c, d;
+printf("Enter four characters: ");
+scanf(" %c %c %c %c", &a, &b, &c, &d);
+if(a == b && b == c && c == d)
+{
+printf("All characters are equal");
+}
+else
+{
+printf("Characters are not equal");
+}
+}</pre>
+<h3> Output </h3>
+<pre>Enter four characters: A A A A
+All characters are equal</pre>
+
+
+<h2> 13.Enter three numbers from users and tell which is greater</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int a, b, c;
+printf("Enter three numbers: ");
+scanf("%d %d %d", &a, &b, &c);
+if(a >= b && a >= c)
+{
+printf("Greatest number = %d", a);
+}
+else if(b >= a && b >= c)
+{
+printf("Greatest number = %d", b);
+}
+else
+{
+printf("Greatest number = %d", c);
+}
+}</pre>
+<h3> Output</h3>
+<pre>Enter three numbers: 12 45 30
+Greatest number = 45</pre>
+
+
+<h2> 14.Enter a number from the user if the user enters 30 then print the month in which we have 30 days. If the enter 31 then print the month 31 days for 28, 29 print the month else everything is invalid</h2>
+<h3>Source Code</h3>
+<pre> #include &lt;stdio.h&gt;
+void main()
+{
+int days;
+printf("Enter number of days: ");
+scanf("%d", &days);
+if(days == 30)
+{
+printf("April, June, September, November");
+}
+else if(days == 31)
+{
+printf("January, March, May, July, August, October, December");
+}
+else if(days == 28 || days == 29)
+{
+printf("February");
+}
+else
+{
+printf("Invalid number of days");
+}
+}</pre>
+<h3> Output</h3>
+<pre>Enter number of days: 30
+April, June, September, November</pre>
+
+<h2> 15.Enter one digit number from user and print in words</h2>
+<h3> Source Code</h3>
+<pre> #include &lt;stdio.h&gt;
+void main()
+{
+int num;
+printf("Enter a one digit number: ");
+scanf("%d", &num);
+switch(num)
+{
+case 0: printf("Zero"); break;
+case 1: printf("One"); break;
+case 2: printf("Two"); break;
+case 3: printf("Three"); break;
+case 4: printf("Four"); break;
+case 5: printf("Five"); break;
+case 6: printf("Six"); break;
+case 7: printf("Seven"); break;
+case 8: printf("Eight"); break;
+case 9: printf("Nine"); break;
+
+default: printf("Invalid number");
+}
+}
+</pre>
+<h3> Output</h3>
+<pre>
+Enter a one digit number: 5
+Five
+</pre>
+
+
+<h2> 16.Enter two characters from user and check both are same or not, if not same then find out difference between them</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void  main()
+{
+char a, b;
+printf("Enter two characters: ");
+scanf(" %c %c", &a, &b);
+if(a == b)
+{
+printf("Both characters are same");
+}
+else
+{
+printf("Difference = %d", a - b);
+}
+}</pre>
+
+<h3> Output</h3>
+<pre>Enter two characters: A D
+Difference = -3</pre>
+
+
+<h2> 17.Enter three numbers from user and which is greater</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int a, b, c;
+printf("Enter three numbers: ");
+scanf("%d %d %d", &a, &b, &c);
+if(a >= b && a >= c)
+{
+printf("Greatest number = %d", a);
+}
+else if(b >= a && b >= c)
+{
+printf("Greatest number = %d", b)
+}
+else
+{
+printf("Greatest number = %d", c);
+}
+}</pre>
+<h3>Output</h3>
+<pre>Enter three numbers: 12 45 30
+Greatest number = 45</pre>
+
+<h2> 18.Enter two digit number from user and print it in word</h2>
+<h3> Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int num, first, second;
+printf("Enter a two digit number: ");
+scanf("%d", &num);
+if(num >= 10 && num <= 99)
+{
+first = num / 10;
+second = num % 10;
+if(first == 5)
+printf("Five ");
+else if(first == 2)
+printf("Two ");
+else if(first == 1)
+printf("One ");
+
+if(second == 0)
+printf("Zero");
+else if(second == 7)
+printf("Seven");
+else if(second ==5)
+printf("Five");
+else if(second == 2)
+printf("Two");
+else if(second == 1)
+printf("One");
+}
+else
+{
+printf("Invalid number");
+}
+}</pre>
+
+<h3>Output</h3>
+<pre>Enter a two digit number: 50
+Five Zero</pre>
+
+<h2> 19.Enter a character from user and it is in upper case, lower case, special characters or numbers</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char ch;
+printf("Enter a character: ");
+scanf("%c", &ch);
+if(ch >= 'A' && ch <= 'Z')
+{
+printf("Uppercase character");
+}
+else if(ch >= 'a' && ch <= 'z')
+{
+printf("Lowercase character");
+}
+else if(ch >= '0' && ch <= '9')
+{
+printf("Number");
+}
+else
+{
+printf("Special character");
+}
+}</pre>
+<h3> Output</h3>
+<pre>Enter a character: A
+Uppercase character</pre>
+
+<h2> 20.Enter the year from user and check its leap year or not</h2>
+<h3>Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+Int  year;
+printf("Enter a year: ");
+scanf("%d", &year);
+if(year % 400 == 0)
+{
+printf("Leap year");
+}
+else if(year % 100 == 0)
+{
+printf("Not a leap year");
+}
+else if(year % 4 == 0)
+{
+printf("Leap year");
+}
+else
+{
+printf("Not a leap year");
+}
+}</pre>
+<h3>Output</h3>
+<pre>Enter a year: 2024
+Leap year</pre>
+
+<h2> 21.Enter date, month, year and check it is valid date or not </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int d, m, y;
+printf("Enter date month year: ");
+scanf("%d %d %d", &d, &m, &y);
+if(m >= 1 && m <= 12 && d >= 1 && d <= 31)
+{
+if(m == 2 && d > 29)
+printf("Invalid date");        
+else if((m == 4 || m == 6 || m == 9 || m == 11) && d > 30)
+printf("Invalid date");
+else
+printf("Valid date");
+}
+else
+printf("Invalid date");
+}
+</pre>
+<h3> Output</h3>
+<pre>
+Enter date month year: 15 8 2025
+Valid date
+</pre>
+
+
+<h2> 22.Enter current date of DOB of user and find out difference</h2>
+<h3>Source code</h3>
+<pre>Enter current date of DOB of user and find out difference 
+#include &lt;stdio.h&gt;
+void main()
+{
+int d1, m1, y1;
+int d2, m2, y2;
+printf("Enter date, month and year: ");
+scanf("%d %d %d", &d1, &m1, &y1);
+printf("Enter DOB, month and year: ");
+scanf("%d %d %d", &d2, &m2, &y2);
+ printf("Difference in years = %d", y1 - y2");
+}</pre>
+<h3>Output</h3>
+<pre> Enter date, month and year: 29 10 2026
+Enter DOB, month and year: 2 2 2009
+Difference in years = 17
+</pre>
+
+
+<h2> 23.Write a program to calculate area and perimeter of rectangle </h2>
+<h3>Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int length, breadth, area, perimeter;
+printf("Enter length and breadth: ");
+scanf("%d %d", &length, &breadth);
+area = length * breadth;
+perimeter = 2 * (length + breadth);
+printf("Area = %d\n", area);
+printf("Perimeter = %d", perimeter);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter length and breadth: 5 3
+Area = 15
+Perimeter = 16
+</pre>
+
+

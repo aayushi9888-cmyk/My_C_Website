@@ -1,0 +1,113 @@
+<!doctype html>
+<title> Structures</title>
+<head>
+<style>
+body{
+margin:0;
+font-family:arial, sans-serif;
+background:#ccc;
+color: #222;
+}
+</style>
+</head>
+<h1>Questions </h1>
+<h2>1.Create structure of employee which there is emp.ID, name, designation of 50 employees from user, print details in tabular form </h2>
+<h3>source code</h3>
+<pre>#include &lt;stdio.h&gt;
+struct employee
+{
+int id;
+char name[30];
+char designation[30];
+};
+void main()
+{
+struct employee emp[50];
+int i;
+for(i = 0; i < 50; i++)
+{
+printf("\nEnter details of employee %d\n", i+1);
+printf("Enter ID: ");
+scanf("%d", &emp[i].id);
+printf("Enter Name: ");
+scanf("%s", emp[i].name);
+printf("Enter Designation: ");
+scanf("%s", emp[i].designation);
+}
+</pre>
+<h3> output</h3>
+<pre>Enter details of employee 1
+Enter ID: 101
+Enter Name: Rahul
+Enter Designation: Manager
+
+Enter details of employee 2
+Enter ID: 102
+Enter Name: Aman
+Enter Designation: Clerk
+
+</pre>
+
+
+<h2> 2.Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print only name of the employee</h2>
+<h3>Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+struct employee
+{
+int id;
+char name[30];
+char designation[30];
+};
+int main()
+{
+struct employee emp[50];
+int i;
+for(i = 0; i < 50; i++)
+{
+printf("\nEnter details of employee %d\n", i+1);
+printf("Enter ID: ");
+scanf("%d", &emp[i].id);
+printf("Enter Name: ");
+scanf("%s", emp[i].name);
+ printf("Enter Designation: ");
+scanf("%s", emp[i].designation);
+}
+</pre>
+<h3> output</h3>
+<pre>Enter details of employee 1
+Enter ID: 101
+Enter Name: Rahul
+Enter Designation: Manager
+
+Enter details of employee 2
+Enter ID: 102
+Enter Name: Aman
+Enter Designation: Clerk
+
+Enter details of employee 3
+Enter ID: 103
+Enter Name: Priya
+Enter Designation: Teacher
+</pre>
+
+
+
+<h2> 3.Create structure of employee which there is emp.ID, name, designation of 50 employees from user and print name character with emp.ID in tabular form</h2>
+<h3>Source code</h3>
+<pre>
+</pre>
+<h3> Output</h3>
+<pre>
+</pre>
+
+
+
+<h2> 4.Enter student details like roll name, fee, DOB and print all the detail by ascending order of roll number</h2>
+<h3>Source Code</h3>
+<pre>
+</pre>
+<h3>Output</h3>
+<pre>
+</pre>
+
+

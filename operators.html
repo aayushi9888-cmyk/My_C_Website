@@ -1,0 +1,239 @@
+<!DOCTYPE>
+<head>
+<title> operators</title></head>
+<style>
+body{
+margin:0;
+font-family:arial, sans-serif;
+background:#ccc;
+color: #222;
+}
+</style>
+</head>
+<body>
+<h1>Questions </h1>
+<h2> 1.Write a program to show that example of pre-increment?</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int i = 5;
+printf("%d", ++i);
+}
+</pre>
+<h3>Output</h3>
+<pre>6</pre>
+
+
+<h2> 2.Write a  program to show that example of post-increment</h2>
+<h3>Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int i = 5;
+printf("%d", i++);
+}
+</pre>
+<h3> Output</h3>
+<pre> 5</pre>
+
+
+<h2> 3.Write a  program to show that example of pre-decrement</h2>
+<h3>Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+   
+int a = 5;
+printf("%d\n", --a);
+printf("%d", a);
+}
+</pre>
+<h3> Output</h3>
+<pre>4
+4</pre>
+
+
+<h2> 4.Write a  program to show that example of post-decrement</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+   
+int a = 5;
+printf("%d\n", a--);
+printf("%d", a);
+}</pre>
+<h3> Output</h3>
+<pre>5
+4</pre>
+
+
+<h2> 5.Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer ?</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int a,b,add,sub,multi,div;
+printf("enter your first no. ");
+scanf("\n%d",&a);
+
+printf("enter your second no. ");
+scanf("\n%d",&b);
+add=a+b;
+printf("\n%d",add);
+printf("\n");
+
+printf("enter your first no. ");
+scanf("\n%d",&a);
+printf("enter your second no. ");
+scanf("\n%d",&b);
+sub=a-b;
+printf("%d",sub);
+printf("\n");
+
+printf("enter your first no. ");
+scanf("\n%d",&a);
+printf("enter your second no. ");
+scanf("\n%d",&b);
+multi=a*b;
+printf("%d",multi);
+printf("\n");
+
+printf("enter your first no. ");
+scanf("\n%d",&a);
+printf("enter your second no. ");
+scanf("\n%d",&b);
+div=a/b;
+printf("%d",div);
+printf("\n");
+}</pre>
+<h3> Output</h3>
+<pre>enter your first no. 10
+enter your second no. 5
+15
+enter your first no. 10
+enter your second no. 5
+5
+enter your first no. 10
+enter your second no. 5
+50
+enter your first no. 10
+enter your second no. 3
+1</pre>
+
+
+<h2> 6. Write a program to enter a number from the user ,the length of the number is depend on the user ,programmer should print the last digit of number </h2>
+<h3> Source Code</h3>
+<pre> #include &lt;stdio.h&gt;
+void main()
+{
+int num;
+printf("enter your no. ");
+scanf("%d",&num);
+printf("your last digit is %d",num%10);
+}</pre>
+<h3> Output</h3>
+<pre>enter your no. 2345
+your last digit is 5</pre>
+
+<h2> 7.Enter a decimal number from the user (float) and print the right hand side of the decimal point ?</h2>
+<h3> Source Code</h3>
+<pre>
+
+
+
+
+
+
+
+</pre>
+<h3> Output</h3>
+<pre> 
+
+
+</pre>
+<h2> 8.Enter a number from user and find out cube of numbers ?</h2>
+<h3> Source Code</h3>
+<pre>
+#include &lt;stdio.h&gt;
+void main()
+{
+int num;
+printf("enter your no. ");
+scanf("%d",&num);
+printf("%d",num*num*num);
+}</pre>
+<h3> Output</h3>
+<pre> enter your no. 3
+27</pre>
+
+<h2> 9.Enter a float number from user and round of the number</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+float num;
+printf("enter float number: ");
+scanf("%f", &num);
+int round = num + 0.5;
+printf("Round off = %d", round);
+}
+</pre>
+<h3> Output</h3>
+<pre> 
+enter float no. 12.6
+Round off=13
+</pre>
+
+
+<h2> 10.Enter a lower case character from user and print it into upper case ?
+<h3>Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char ch;
+printf("enter lower case: ");
+scanf("%c", &ch);
+printf("Upper case is %c", ch-32);
+}
+</pre>
+<h3>Output</h3>
+<pre> enter lower case: a
+Upper case is A</pre>
+
+
+<h2> 11.Enter marks of students and calculate average of student’s marks </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int m1, m2, m3;
+float avg;    
+printf("Enter 3 marks: ");
+scanf("%d %d %d", &m1, &m2, &m3);
+avg = (m1 + m2 + m3) / 3.0;
+printf("Average = %f", avg);
+}</pre>
+<h3> Output</h3>
+<pre>
+Enter 3 marks: 80 90 70
+Average = 80.000000
+</pre>
+
+<h2> 12. Calculate simple interest = (P x R x T)/ 100</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int principal=1000,time=2;
+float rate=5;
+int simple;
+simple=principal*rate*time/100;
+printf(" simple interest=%d",simple);	
+}</pre>
+
+<h3> Output</h3>
+<pre> simple interest=100.000000</pre>
+
+

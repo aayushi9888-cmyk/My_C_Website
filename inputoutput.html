@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<head>
+<title>Input output</title></head>
+<style>
+body{
+margin:0;
+font-family:arial, sans-serif;
+background:#ccc;
+color: #222;
+}
+</style>
+</head>
+<body><h1>Questions </h1>
+<h2> 1. write a program to print the message Today I made my first c program</h2>
+<h3> Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+printf("Today I made my first C Program.");
+}
+</stdio.h></pre>
+<h3> Output</h3>
+<pre>Today I made my first c program.</pre>
+
+<h2> 2.write a program to read a character from the keyboard and display it on the screen</h2>
+<h3> Source code</h3>
+<pre> #include &lt;stdio.h&gt;
+void main()
+{
+char ch;
+printf("input: ")
+scanf("%c",&amp;ch);
+printf("output: %c",ch);
+}
+</stdio.h></pre>
+<h3>Output</h3>
+<pre>input: a
+output:a</pre>
+
+<h2> 3. write a program to read only 4 characters from the keyboard and display it on the screen in a separate line.</h2><h2>
+</h2><h3> Source code</h3>
+<pre>
+
+
+
+
+
+</pre>
+<h3> Output</h3>
+<pre> 
+
+</pre>
+
+<h2> 4. write a program to store single quote and print that variable to show single quote on output screen.</h2>
+<h3> Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char ch='\'';
+printf(" your character is %c",ch);
+}
+</stdio.h></pre>
+<h3> Output</h3>
+<pre> your character is ' </pre>
+
+<h2> 5. wrtie a program to print your name at center of the first line</h2>
+<h3> Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+	printf("           Ayushi");
+} </stdio.h></pre>
+<h3> Output </h3>
+<pre>               Ayushi
+</pre>
+
+<h2> 6. write a program for printing your name on output screen but your name should blink 5 times</h2>
+<h3> Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+int i;
+for(i=1; i&lt;=5; i++)
+{
+printf("Ayushi\n");
+delay(2000);
+}
+}</dos.h></conio.h></stdio.h></pre>
+<h3> Output</h3>
+<pre>Ayushi
+Ayushi
+Ayushi
+Ayushi
+Ayushi
+(each appears aftre 2 seconds delay)</pre>
+
+<h2> 7. write a program to print your name at center of the first line</h2>
+<h3> Source code</h3>
+<pre># include &lt;stdio.h&gt;
+void main()
+{
+	printf("           Ayushi");
+}</pre>
+<h3> Output </h3>
+<pre>               Ayushi
+</pre>
+
+<h2>8.write the program this output?
+<pre>#include
+#include
+#include
+void main()
+{
+clrscr();
+printf("hello,welcome to c");
+delay(5000);
+}</pre></h2>
+
+<h3>Source code:</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int i;
+for(i=1; i&lt;=3; i++)
+{
+char ch[9]="#include";
+printf("\n%s",ch);
+}
+printf("\nvoid main()");
+printf("\n{");
+printf("\nclrscr();");
+printf("\nprintf(\"hello,welcome to c\");");
+printf("\ndelay(5000);");
+printf("\n}");
+}</stdio.h></pre>
+
+<h3> Output:</h3>
+<pre>#include
+#include
+#include
+void main()
+{
+clrscr();
+printf("hello,welcome to c");
+delay(5000);
+}</pre>
+
+<h2> 9. write a program to print your name at the center of the page?</h2>
+<h3> Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+    printf("\n\n\n\n\n\n\n\n\n\n");
+    printf("                    Ayushi");
+
+}</stdio.h></pre>
+
+<h3>Output</h3>
+<pre>(blank 10 times)
+                      Ayushi(at the center)
+</pre>
+
+<h2> 10. write a program to store single quote and print that variable to show single quote on output screen.</h2>
+<h3> Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char ch='\'';
+printf(" your character is %c",ch);
+}
+</stdio.h></pre>
+<h3> Output</h3>
+<pre> your character is ' </pre>
+
+<h2> 11. write a program for printing your name on output screen but your name should blink 5 times</h2>
+<h3> Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+int i;
+for(i=1; i&lt;=5; i++)
+{
+printf("Ayushi\n");
+delay(2000);
+}
+}</pre>
+<h3> Output</h3>
+<pre>Ayushi
+Ayushi
+Ayushi
+Ayushi
+Ayushi
+(each appears aftre 2 seconds delay)</pre>
+
+<h2> 12. Enter password display like ****** </h2>
+<h3> Source code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char password[20];
+int i;
+printf("Enter password: ");
+scanf("%s", password);
+for(i = 0; password[i] != '\0'; i++)
+printf("*");
+}</stdio.h></pre>
+<h3> Output</h3>
+<pre> Enter password:aayu1234
+********
+</pre>
+ 
+<h2> 13. Enter two character from user and print ASCII value?</h2>
+<h3> Source code</h3>
+<pre> #include &lt;stdio.h&gt;
+void main()
+{
+char ch;
+char ch2;
+printf("enter your first character ");
+scanf("%c",&amp;ch);
+printf("%d",ch);
+printf("\nenter your second character ");
+scanf(" %c",&amp;ch2);
+printf("%d",ch2);    
+}
+</pre>
+<h3>Output</h3>
+<pre> enter your first character A
+65
+enter your second character B
+66</pre>
+
+<h2> 14. Print all ASCII character 0 to 127?</h2>
+<h3> Source code</h3>
+<pre>
+
+</pre>
+<h3>Output</h3>
+<pre>
+</pre>

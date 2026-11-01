@@ -1,0 +1,562 @@
+<!doctype html>
+<title> strings </title>
+<head>
+<style>
+body{
+margin:0;
+font-family:arial, sans-serif;
+background:#ccc;
+color: #222;
+}
+</style>
+</head>
+<h1>Questions </h1>
+<h2>1.Enter a string from user and convert in uppercase</h2>
+<h3>Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100];
+int i;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+if(str[i] >= 'a' && str[i] <= 'z')
+{
+str[i] = str[i] - 32;
+}
+}
+printf("Uppercase = %s", str);
+
+}</pre>
+<h3> Output</h3>
+<pre>Enter a string: hello
+Uppercase = HELLO</pre>
+
+
+
+<h2> 2.Enter a string from user and convert into lowercase      </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100];
+int i;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+if(str[i] >= 'A' && str[i] <= 'Z')
+{
+str[i] = str[i] + 32;
+}
+}
+printf("Lowercase = %s", str);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string: HELLO
+Lowercase = hello
+</pre>
+
+
+
+<h2> 3. Enter a string from user and convert into sentence case </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100];
+int i;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+if(i == 0)
+{
+if(str[i] >= 'a' && str[i] <= 'z')
+str[i] = str[i] - 32;
+}
+else
+{
+if(str[i] >= 'A' && str[i] <= 'Z')
+str[i] = str[i] + 32;
+}
+}
+printf("Sentence Case = %s", str);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string: hELLO
+Sentence Case = Hello
+</pre>
+
+
+
+<h2> 4.Enter a string from user and convert into title case      </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100];
+int i;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+if(i == 0)
+{
+if(str[i] >= 'a' && str[i] <= 'z')
+str[i] = str[i] - 32;
+}
+else
+{
+if(str[i] >= 'A' && str[i] <= 'Z')
+str[i] = str[i] + 32;
+}
+}
+printf("Title Case = %s", str);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string: hELLO
+Title Case = Hello
+</pre>
+
+
+
+<h2> 5.Enter a string from user and convert into toggle case.</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100];
+int i;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+if(str[i] >= 'a' && str[i] <= 'z')
+str[i] = str[i] - 32;
+else if(str[i] >= 'A' && str[i] <= 'Z')
+str[i] = str[i] + 32;
+}
+printf("Toggle Case = %s", str);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string: HeLLo
+Toggle Case = hEllO
+</pre>
+
+
+
+<h2> 6.Enter a string from user and final length of the string  </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100];
+int i, count = 0;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+count++;
+}
+printf("Length = %d", count);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string: Hello
+Length = 5
+</pre>
+
+
+
+<h2> 7.Enter a string from user and compare those string </h2>
+<h3> Source Code</h3>
+<pre> #include &lt;stdio.h&gt;
+void main()
+{
+char str1[100], str2[100];
+int i, flag = 0;
+printf("Enter first string ");
+scanf("%s", str1);
+printf("Enter second string ");
+scanf("%s", str2);
+for(i = 0; str1[i] != '\0' || str2[i] != '\0'; i++)
+{
+if(str1[i] != str2[i])
+{
+flag = 1;
+break;
+}
+}
+if(flag == 0)
+printf("Strings are equal");
+else
+printf("Strings are not equal");
+
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter first string: Hello
+Enter second string Hello
+Strings are equal
+</pre>
+
+
+
+<h2> 8.Enter a string from user and concatenate the string </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str1[200], str2[100];
+int i, j;
+printf("Enter first string ");
+scanf("%s", str1);
+printf("Enter second string ");
+scanf("%s", str2);
+for(i = 0; str1[i] != '\0'; i++)
+{
+}
+for(j = 0; str2[j] != '\0'; j++)
+{
+str1[i] = str2[j];
+i++;
+str1[i] = '\0';
+printf("Concatenated string%s", str1);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter first string Hello
+Enter second string World
+Concatenated string = HelloWorld
+</pre>
+
+
+
+
+<h2> 9.Enter a string from user and copy that string into another string </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str1[100], str2[100];
+int i;
+printf("Enter a string: ");
+scanf("%s", str1);
+for(i = 0; str1[i] != '\0'; i++)
+{
+str2[i]=str1[i];
+}
+str2[i]='\0';
+printf("Copied string = %s", str2);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string: Hello
+Copied string = Hello
+</pre>
+
+
+
+
+<h2> 10.Enter the string from user ,enter a number from user ,if the user enter 0 then you will print first character of string ,if the user enter 1 then you will print second character of string ,if user enter 2 then you will print third character of string ,if user enter 3 then you point fourth character of string and if out of string then you will print out of bound </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100];
+int i, n, count = 0;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+count++;
+}
+printf("Enter position (0-3): ");
+scanf("%d", &n);
+if(n >= 0 && n <= 3 && n < count)
+{
+printf("Character = %c", str[n]);
+}
+else
+{
+printf("Out of postion");
+}
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string: Hello
+Enter position (0-3): 2
+Character = l
+</pre>
+
+
+
+<h2> 11.Enter the string from user and print each character in new line </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100];
+int i;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+printf("%c\n", str[i]);
+}
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string: HELLO
+H
+E
+L
+L
+O
+</pre>
+
+
+
+
+<h2> 12.Enter the string from user and copy reverse order into another string      </h2>
+<h3> Source Code</h3>
+<pre>
+
+
+</pre>
+<h3>Output</h3>
+<pre>
+
+
+</pre>
+
+
+
+
+
+<h2> 13.Enter two string from user and print difference each character   </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str1[100], str2[100];
+int i, diff;
+printf("Enter first string: ");
+scanf("%s", str1);
+printf("Enter second string ");
+scanf("%s", str2);
+for(i = 0; str1[i] != '\0' && str2[i] != '\0'; i++)
+{
+diff = str1[i] - str2[i];
+printf("Difference %d\n", diff);
+}
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter first string ABC
+Enter second string ABD
+Difference 0
+Difference 0
+Difference -1
+</pre>
+
+
+
+
+<h2> 14.Enter the string from user and enter a character , it is exist or not  </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100], ch;
+int i, flag = 0;
+printf("Enter a string");
+scanf("%s", str);
+printf("Enter a character: ");
+scanf(" %c", &ch);
+for(i = 0; str[i] != '\0'; i++)
+{
+if(str[i] == ch)
+{
+flag = 1;
+break;
+}
+}
+if(flag == 1)
+printf("Character exists");
+else
+printf("Character does not exist");
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string: HELLO
+Enter a character: L
+Character exist
+</pre>
+
+
+
+<h2> 15.Enter the string from user and enter a character if it is exist then print the bound number</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100], ch;
+int i, flag = 0;
+printf("Enter a string");
+scanf("%s", str);
+printf("Enter a character");
+scanf(" %c", &ch);
+for(i = 0; str[i] != '\0'; i++)
+{
+if(str[i] == ch)
+{
+printf("Bound number%d", i);
+flag = 1;
+break;
+}
+if(flag == 0)
+printf("Character does not exist");
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string HELLO
+Enter a character L
+Bound number 2
+</pre>
+
+
+
+<h2> 16.Enter the string from user and count all vowels </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char str[100];
+int i, count = 0;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+if(str[i] == 'a' || str[i] == 'e' ||
+str[i] == 'i' || str[i] == 'o' ||
+str[i] == 'u' || str[i] == 'A' ||
+str[i] == 'E' || str[i] == 'I' ||
+str[i] == 'O' || str[i] == 'U')
+{
+count++;
+}
+printf("Total vowels = %d", count);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string Education
+Total vowels 5
+</pre>
+
+
+
+<h2> 17. Enter the string from user and enter bound number and print character on that bound</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+
+void main()
+{
+char str[100]
+int i, n, count = 0;
+printf("Enter a string: ");
+scanf("%s", str);
+for(i = 0; str[i] != '\0'; i++)
+{
+count++;
+printf("Enter bound number: ");
+scanf("%d", &n);
+if(n >= 0 && n < count)
+{
+printf("Character = %c", str[n]);
+else
+{
+printf("Out of bound");
+}
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter a string HELLO
+Enter bound number 3
+Character L
+</pre>
+
+
+<h2> 18.String palindrome example (using reverse)      </h2>
+<h3> Source Code</h3>
+<pre>
+
+
+</pre>
+<h3>Output</h3>
+<pre>
+
+</pre>
+
+
+
+<h2> 19.Enter the data from user the data consist of roll no. ,name ,class , marks of 5 subjects      </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int roll, m1, m2, m3, m4, m5;
+char name[50], className[20];
+printf("Enter roll number");
+scanf("%d", &roll);
+printf("Enter name);
+scanf("%s", name;
+printf("Enter class);
+scanf("%s", className);
+printf("Enter marks of 5 subjects ");
+scanf("%d%d%d%%d",&m1,&m2,&m3,&m4,&m5);
+printf("\nStudent Details\");
+printf("Name = %s\n", name);
+printf("Class = %s\n", className);
+printf("Subject 1 = %d\", m1);
+printf("Subject 2 = %d\n", m2);
+printf("Subject 3 = %d", m3);
+printf("Subject 4 = %d\n", m4);
+printf("Subject 5 = %d\n", m5);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter roll number: 101
+Enter name: deepu
+Enter class: BCA
+Enter marks of 5 subjects: 80 75 90 85 88
+
+Student Details
+Roll Number = 101
+Name = deepu
+Class = BCA
+Subject 1 = 80
+Subject 2 = 75
+Subject 3 = 90
+Subject 4 = 85
+Subject 5 = 88
+</pre
+
+
+
+
+
+
+
+
+
+
+
+
