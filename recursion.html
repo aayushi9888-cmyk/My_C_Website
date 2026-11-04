@@ -1,0 +1,76 @@
+<!doctype html>
+<title> rescursion</title>
+<head>
+<style>
+body{
+margin:0;
+font-family:arial, sans-serif;
+background:#ccc;
+color: #222;
+}
+</style>
+</head>
+<h1>Questions</h1>
+<h2> 1.write a program of recursion and display the output</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void display(int n)
+{
+if(n <= 5)
+{
+printf("%d", n);
+display(n + 1);
+}
+}
+void main()
+{
+ display(1);
+}
+</pre>
+<h3>Output</h3>
+<pre>1 2 3 4 5
+</pre>
+
+
+<h2> 2.write a program of recursion with global varaiable and display the output  </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+int n = 1;
+void display()
+{
+if(n <= 5)
+{
+printf("%d ", n);
+n++;
+display();
+}
+}
+void main()
+{
+display();
+}
+</pre>
+<h3>Output</h3>
+<pre>1 2 3 4 5
+</pre>
+
+
+
+<h2> 3. write a program of recursion with local variable and display the output</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void display(int n)
+{
+if(n <= 5)
+{
+printf("%d ", n);
+display(n + 1);
+}
+}
+int main()
+{
+display(1);
+}</pre>
+<h3> Output</h3>
+<pre>1 2 3 4 5 
+</pre>

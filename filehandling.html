@@ -1,0 +1,280 @@
+<!doctype html>
+<title> fle handling</title>
+<head>
+<style>
+body{
+margin:0;
+font-family:arial, sans-serif;
+background:#ccc;
+color: #222;
+}
+</style>
+</head>
+<h1>Questions</h1>
+<h2> 1.Create a file and write data entered by the user </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+FILE *fp;
+char name[30], data[100];
+printf("Enter file name: ");
+scanf("%s", name);
+fp = fopen(name, "w");
+printf("Enter data ");
+scanf(" %\n", data);
+fprintf(fp, "%s", data);
+fclose(fp);
+printf("Data written successfully.");
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter file name: abc.txt
+Enter data: Hello World
+Data written successfully
+</pre>
+
+
+
+<h2> 2. enter data into a file in capital letters     </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+FILE *fp;
+char name[30], data[100];
+int i;
+printf("Enter file name: ");
+scanf("%s", name);
+fp = fopen(name, "w");
+printf("Enter data: ");
+scanf(" %[\n]", data);
+for(i = 0; data[i] != '\0'; i++)
+{
+fputc(toupper((unsigned char)data[i]), fp);
+}
+fclose(fp);
+printf("Data written in capital letters.");
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter file name: abc.txt
+Enter data: hello world
+Data written in capital letters
+</pre>
+
+
+
+<h2> 3. enter data into a file until the user wantsto stop </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+FILE *fp;
+char name[30], data[100];
+char ch;
+printf("Enter file name: ");
+scanf("%s", name);
+fp = fopen(name, "w");
+do
+{
+printf("Enter data: ");
+scanf(" %[\n]", data);
+fprintf(fp, "%s\n", data);
+printf("Do you want to continue? (y/n): ");
+scanf(" %c", &ch);
+} while(ch == 'y' || ch == 'Y');
+fclose(fp);
+printf("Data saved successfully.");
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter file name: abc.txt
+Enter data: Hello
+Do you want to continue? (y/n) y
+Enter data: How are you
+Do you want to continue? (y/n) n
+Data saved successfully
+</pre>
+
+
+
+<h2> 4. copy one file into another file</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+FILE *fp1, *fp2;
+char name1[30], name2[30];
+char ch;
+printf("Enter first file name: ");
+scanf("%s", name1);
+fp1 = fopen(name1, "r");
+printf("Enter second file name: ");
+scanf("%s", name2);
+fp2 = fopen(name2, "w");
+while((ch = fgetc(fp1)) != EOF)
+{
+fputc(ch, fp2);
+}
+fclose(fp1);
+fclose(fp2);
+printf("File copied successfully.");
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter first file name: abc.txt
+Enter second file name: xyz.txt
+File copied successfully.
+</pre>
+
+
+
+<h2> 5.rename a file using a new name entered by the user </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+char oldname[30], newname[30];
+printf("Enter old file name: ");
+scanf("%s", oldname);
+printf("Enter new file name: ");
+scanf("%s", newname);
+if(rename(oldname, newname) == 0)
+{
+printf("File renamed successfully.");
+}
+else
+{
+printf("Unable to rename file.");
+}
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter old file name: abc.txt
+Enter new file name: new.txt
+File renamed successfull
+</pre>
+
+
+
+<h2> 6. concatenate two files into a third file     </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+FILE *fp1, *fp2, *fp3;
+char name1[30], name2[30], name3[30];
+char ch;
+printf("Enter first file name: ");
+scanf("%s", name1);
+printf("Enter second file name: ");
+scanf("%s", name2);
+printf("Enter third file name: ");
+scanf("%s", name3);
+fp1 = fopen(name1, "r");
+fp2 = fopen(name2, "r");
+fp3 = fopen(name3, "w");
+while((ch = fgetc(fp1)) != EOF)
+{
+fputc(ch, fp3);
+}
+while((ch = fgetc(fp2)) != EOF)
+{
+fputc(ch, fp3);
+}
+fclose(fp1);
+fclose(fp2);
+fclose(fp3);
+printf("Files concatenated successfully.");
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter first file name: abc.txt
+Enter second file name: xyz.txt
+Enter third file name: new.txt
+Files concatenated successfully
+</pre>
+
+
+
+
+<h2> 7. create a file and count the number of characters </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+FILE *fp;
+char name[30];
+int count = 0;
+char ch;
+printf("Enter file name: ");
+scanf("%s", name);
+fp = fopen(name, "w");
+printf("enter file name ");
+scanf(" %c", &ch);
+while(ch != '#')
+{
+fputc(ch, fp);
+scanf("%c", &ch);
+fclose(fp);
+fp = fopen(name, "r");
+while((ch = fgetc(fp)) != EOF)
+{
+ count++;
+}
+fclose(fp);
+printf("Total characters = %d", count);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter file name: abc.txt
+Enter data: Hello
+Total characters = 5
+</pre> 
+
+
+<h2> 8.create a file and count the numbes of words </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+FILE *fp;
+char name[30];
+char ch;
+int count = 0, flag = 0;
+ printf("enter file name ");
+scanf("%s", name);
+fp = fopen(name, "w");
+printf("Enter data: ");
+while((ch = getchar()) != '#')
+{
+fputc(ch, fp);
+}
+fclose(fp);
+fp = fopen(name, "r");
+while((ch = fgetc(fp)) != EOF)
+{
+if(isspace(ch))
+{
+flag = 0;
+}
+else if(flag == 0)
+{
+count++;
+flag = 1;
+}
+}
+fclose(fp);
+printf("Total words = %d", count);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter file name: abc.txt
+Enter data: Hello World
+Total words = 2
+</pre>
+
+
+
+

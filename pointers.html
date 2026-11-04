@@ -1,0 +1,92 @@
+<!doctype html>
+<title> pointers</title>
+<head>
+<style>
+body{
+margin:0;
+font-family:arial, sans-serif;
+background:#ccc;
+color: #222;
+}
+</style>
+</head>
+<h1>Questions</h1>
+<h2>1.Program to a pointer should point the array and through pointer we will fill all the location of the array by asking the value from user and print the array</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+void main()
+{
+int arr[5], i;
+int *ptr;
+printf("Enter 5 array elements:");
+for(i = 0; i < 5; i++)
+{
+scanf("%d", &arr[i]);
+}
+ptr = &arr[0];
+printf("\nValues and Addresses:\n");
+for(i = 0; i < 5; i++)
+{
+printf("Value = %d\n", *(ptr + i));
+printf("Address = %p\n",*(ptr + i));
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter 5 array elements:10 20 30 40 50
+Values and Addresses:
+Value = 10
+Address = 1000
+Value = 20
+Address = 1004
+Value = 30
+Address = 1008
+Value = 40
+Address = 1012
+Value = 50
+Address = 1016
+</pre>
+
+
+
+<h2> 2. write a program in which we are having a 2-D array of 2X3, insert te value through pointer and print the value      </h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+ void main()
+{
+int arr[2][3];
+int *ptr;
+int i, j;
+ptr = &arr[0][0];
+printf("Enter 6 elements:\n");
+for(i = 0; i < 2; i++)
+{
+for(j = 0; j < 3; j++)
+{
+scanf("%d", (ptr + i*3 + j));
+}
+}
+printf("\nElements of 2-D array:\n");
+ for(i = 0; i < 2; i++)
+{
+for(j = 0; j < 3; j++)
+{
+printf("%d\t", *(ptr + i*3 + j));
+}
+printf("\n");
+}
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter 6 elements:
+10 20 30
+40 50 60
+Elements of 2-D array:
+10    20    30
+40    50    60
+</pre>
+
+
+
+
+
+

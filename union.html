@@ -1,0 +1,65 @@
+<!doctype html>
+<title> rescursion</title>
+<head>
+<style>
+body{
+margin:0;
+font-family:arial, sans-serif;
+background:#ccc;
+color: #222;
+}
+</style>
+</head>
+<h1>Questions</h1>
+<h2> 1.write a program to declare a union and display its members</h2>
+<h3> Source Code</h3>
+<pre>#include &lt;stdio.h&gt;
+union student
+{
+int roll;
+float marks;
+};
+void main()
+{
+union student s;
+s.roll = 101;
+printf("Roll Number = %d\n", s.roll);
+s.marks = 85.5;
+printf("Marks = %.f", s.marks);
+}
+</pre>
+<h3>Output</h3>
+<pre>Roll Number = 101
+Marks = 85.5
+</pre>
+
+
+
+<h2> 2.write a program to input and display student details using union      </h2>
+<h3> Source Code</h3>
+<pre>#include  &lt;stdio.h&gt;
+union student
+{
+int roll;
+float marks;
+};
+void main()
+{
+union student s;
+printf("Enter roll number: ");
+scanf("%d", &s.roll);
+printf("Roll Number = %d\n", s.roll);
+printf("Enter marks: ");
+scanf("%f", &s.marks);
+printf("Marks = "%f", s.marks);
+}
+</pre>
+<h3>Output</h3>
+<pre>Enter roll number: 101
+Roll Number = 101
+Enter marks: 90
+Marks = 90.0
+</pre>
+
+
+
